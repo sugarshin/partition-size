@@ -5,7 +5,13 @@
 [![GitHub version][github-ver-image]][github-ver-url]
 [![License][license-image]][license-url]
 
-partition-size
+Splits an array by size.
+
+## Getting started
+
+```
+npm i partition-size
+```
 
 ## Usage
 
@@ -43,7 +49,7 @@ var result = partitionSize(arr, -1); // => [1, 2, 3, 4]
 4. Push to the branch: git push origin my-new-feature
 5. Submit a pull request :D
 
-```zsh
+```
 npm test
 ```
 
