@@ -10,7 +10,8 @@ partition = require 'lodash.partition'
 
 module.exports = partitionSize = do ->
   _partitionSize = (array, size, result, n) ->
-    return array if array.length <= size or 0 >= size
+    return array if 0 >= size
+    return [array] if array.length <= size
 
     if result?
       result.pop()

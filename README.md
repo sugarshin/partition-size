@@ -38,7 +38,8 @@ console.log(njs); // => ['vivalo', '3rensho', 'kalavinka', 'level', 'nagasawa', 
 
 
 var arr = [1, 2, 3, 4];
-var result = partitionSize(arr, 5); // => [1, 2, 3, 4]
+var result = partitionSize(arr, 5); // => [[1, 2, 3, 4]]
+
 var result = partitionSize(arr, 0); // => [1, 2, 3, 4]
 var result = partitionSize(arr, -1); // => [1, 2, 3, 4]
 ```

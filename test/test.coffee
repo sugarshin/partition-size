@@ -32,8 +32,8 @@ describe 'partitionSize', ->
     arr = [1, 2, 3, 4, 5, 6, 7, 8];
     r = partitionSize arr, 9
     assert(
-      r.length is 8 and
-      r.every (el, i) -> el is arr[i]
+      r.length is 1 and
+      r[0].every (el, i) -> el is arr[i]
     )
 
   it 'array length 8 / size 0', ->
