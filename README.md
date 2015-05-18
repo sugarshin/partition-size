@@ -15,6 +15,8 @@ npm i partition-size
 
 ## Usage
 
+### `partitionSize(array, size);`
+
 ```js
 var partitionSize = require('partition-size');
 
@@ -31,7 +33,7 @@ var njs = [
 var result = partitionSize(njs, 3);
 
 console.log(result); // => [['vivalo', '3rensho', 'kalavinka'], ['level', 'nagasawa', 'umezawa'], ['makino']]
-console.log(njs); // => ['vivalo','3rensho','kalavinka','level','nagasawa','umezawa','makino']
+console.log(njs); // => ['vivalo', '3rensho', 'kalavinka', 'level', 'nagasawa', 'umezawa', 'makino']
 
 
 
