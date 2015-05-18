@@ -1,6 +1,6 @@
 {
   "name": "partition-size",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "partition-size",
   "repository": {
     "type": "git",
@@ -146,7 +146,6 @@
     "coffeeify": "^1.1.0",
     "coffeelint": "^1.9.7",
     "espower-coffee": "^0.10.0",
-    "jsdom": "^5.4.1",
     "mocha": "^2.2.5",
     "power-assert": "^0.11.0"
   },

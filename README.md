@@ -30,19 +30,20 @@ console.log(njs); // => ['vivalo','3rensho','kalavinka','level','nagasawa','umez
 
 
 var arr = [1, 2, 3, 4];
-var result = partitionSize(arr, 5);
-
-console.log(result); // => [1, 2, 3, 4]
+var result = partitionSize(arr, 5); // => [1, 2, 3, 4]
+var result = partitionSize(arr, 0); // => [1, 2, 3, 4]
+var result = partitionSize(arr, -1); // => [1, 2, 3, 4]
 ```
 
 ## Contributing
 
-deps
+1. Fork it!
+2. Create your feature branch: git checkout -b my-new-feature
+3. Commit your changes: git commit -am 'Add some feature'
+4. Push to the branch: git push origin my-new-feature
+5. Submit a pull request :D
 
-* lodash.partition
-
-
-```shell
+```zsh
 npm test
 ```
 
