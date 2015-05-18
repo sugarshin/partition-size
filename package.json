@@ -1,0 +1,156 @@
+{
+  "name": "partition-size",
+  "version": "0.0.1",
+  "description": "partition-size",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sugarshin/partition-size.git"
+  },
+  "main": "index.js",
+  "files": [
+    "lib",
+    "index.js",
+    "test",
+    "package.json",
+    "README.md"
+  ],
+  "coffeelintConfig": {
+    "coffeescript_error": {
+      "level": "error"
+    },
+    "arrow_spacing": {
+      "name": "arrow_spacing",
+      "level": "warn"
+    },
+    "no_tabs": {
+      "name": "no_tabs",
+      "level": "error"
+    },
+    "no_trailing_whitespace": {
+      "name": "no_trailing_whitespace",
+      "level": "warn",
+      "allowed_in_comments": false,
+      "allowed_in_empty_lines": true
+    },
+    "max_line_length": {
+      "name": "max_line_length",
+      "value": 80,
+      "level": "warn",
+      "limitComments": true
+    },
+    "line_endings": {
+      "name": "line_endings",
+      "level": "ignore",
+      "value": "unix"
+    },
+    "no_trailing_semicolons": {
+      "name": "no_trailing_semicolons",
+      "level": "error"
+    },
+    "indentation": {
+      "name": "indentation",
+      "value": 2,
+      "level": "error"
+    },
+    "camel_case_classes": {
+      "name": "camel_case_classes",
+      "level": "error"
+    },
+    "colon_assignment_spacing": {
+      "name": "colon_assignment_spacing",
+      "level": "warn",
+      "spacing": {
+        "left": 0,
+        "right": 1
+      }
+    },
+    "no_implicit_braces": {
+      "name": "no_implicit_braces",
+      "level": "ignore",
+      "strict": true
+    },
+    "no_plusplus": {
+      "name": "no_plusplus",
+      "level": "ignore"
+    },
+    "no_throwing_strings": {
+      "name": "no_throwing_strings",
+      "level": "error"
+    },
+    "no_backticks": {
+      "name": "no_backticks",
+      "level": "error"
+    },
+    "no_implicit_parens": {
+      "name": "no_implicit_parens",
+      "level": "ignore"
+    },
+    "no_empty_param_list": {
+      "name": "no_empty_param_list",
+      "level": "warn"
+    },
+    "no_stand_alone_at": {
+      "name": "no_stand_alone_at",
+      "level": "ignore"
+    },
+    "space_operators": {
+      "name": "space_operators",
+      "level": "warn"
+    },
+    "duplicate_key": {
+      "name": "duplicate_key",
+      "level": "error"
+    },
+    "empty_constructor_needs_parens": {
+      "name": "empty_constructor_needs_parens",
+      "level": "ignore"
+    },
+    "cyclomatic_complexity": {
+      "name": "cyclomatic_complexity",
+      "value": 10,
+      "level": "ignore"
+    },
+    "newlines_after_classes": {
+      "name": "newlines_after_classes",
+      "value": 3,
+      "level": "ignore"
+    },
+    "no_unnecessary_fat_arrows": {
+      "name": "no_unnecessary_fat_arrows",
+      "level": "warn"
+    },
+    "missing_fat_arrows": {
+      "name": "missing_fat_arrows",
+      "level": "ignore"
+    },
+    "non_empty_constructor_needs_parens": {
+      "name": "non_empty_constructor_needs_parens",
+      "level": "ignore"
+    }
+  },
+  "scripts": {
+    "start": "coffee -cw -o lib/ src/",
+    "lint": "coffeelint ./src/partition-size.coffee",
+    "test": "mocha --require espower-coffee/guess test/**/*.coffee",
+    "compile": "coffee -c -o lib/ src/",
+    "build": "npm run lint && npm run compile"
+  },
+  "engines": {
+    "node": "0.12.x"
+  },
+  "author": "sugarshin",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^10.2.0",
+    "coffee-script": "^1.9.2",
+    "coffeeify": "^1.1.0",
+    "coffeelint": "^1.9.7",
+    "espower-coffee": "^0.10.0",
+    "jsdom": "^5.4.1",
+    "mocha": "^2.2.5",
+    "power-assert": "^0.11.0"
+  },
+  "dependencies": {
+    "lodash.partition": "^3.1.0"
+  }
+}
