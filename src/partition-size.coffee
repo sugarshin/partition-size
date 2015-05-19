@@ -9,22 +9,21 @@
 partition = require 'lodash.partition'
 
 module.exports = partitionSize = do ->
-  _partitionSize = (array, size, result, n) ->
+  _partitionSize = (array, size, _result, _n) ->
     return array if 0 >= size
     return [array] if array.length <= size
 
-    if result?
-      result.pop()
-      partition(
-        array
-        (el, i, array) -> i < size
-      ).forEach (el, i) -> result.push el
-    else
-      result = partition　array, (el, i, array) -> i < size
+    _r = partition　array, (el, i) -> i < size
 
-    if n? then n++ else n = 1
-
-    if result[n].length > size
-      _partitionSize result[n], size, result, n
+    if _result?
+      _result.pop()
+      _r.forEach (el) -> _result.push el
     else
-      return result
+      _result = _r
+
+    if _n? then _n++ else _n = 1
+
+    if _result[_n].length > size
+      _partitionSize _result[_n], size, _result, _n
+    else
+      return _result
