@@ -10,7 +10,10 @@ partition = require 'lodash.partition'
 
 module.exports = partitionSize = do ->
   _partitionSize = (array, size, _result, _n) ->
-    return array if 0 >= size
+    unless Array.isArray(array)
+      throw new Error 'The first argument should be an Array.'
+
+    return array if typeof size isnt 'number' or 0 >= size
     return [array] if array.length <= size
 
     _r = partition　array, (el, i) -> i < size

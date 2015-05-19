@@ -41,6 +41,7 @@ var result = partitionSize(arr, 5); // => [[1, 2, 3, 4]]
 
 var result = partitionSize(arr, 0); // => [1, 2, 3, 4]
 var result = partitionSize(arr, -1); // => [1, 2, 3, 4]
+var result = partitionSize(arr, 'not a number'); // => [1, 2, 3, 4]
 ```
 
 ## Contributing
