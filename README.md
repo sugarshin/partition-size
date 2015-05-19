@@ -1,7 +1,6 @@
 # partition-size
 
 [![Build Status][travis-image]][travis-url]
-[![Coverage Status][coveralls-image]][coveralls-url]
 [![GitHub version][github-ver-image]][github-ver-url]
 [![License][license-image]][license-url]
 
