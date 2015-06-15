@@ -52,6 +52,8 @@ var result = partitionSize(arr, 'not a number'); // => [1, 2, 3, 4]
 4. Push to the branch: git push origin my-new-feature
 5. Submit a pull request :D
 
+## Test
+
 ```
 npm test
 ```
