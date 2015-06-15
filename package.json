@@ -16,10 +16,12 @@
   ],
   "scripts": {
     "start": "coffee -cw -o lib/ src/",
-    "lint": "coffeelint -f coffeelint.json src/partition-size.coffee",
     "test": "mocha --require espower-coffee/guess test/**/*.coffee",
+    "lint": "coffeelint -f coffeelint.json src/partition-size.coffee",
     "compile": "coffee -c -o lib/ src/",
-    "build": "npm run lint && npm run compile"
+    "standalone": "browserify src/partition-size.coffee -t coffeeify -s partitionSize | derequire > build/partition-size.js",
+    "minify": "uglifyjs build/partition-size.js -m -c warnings=false --comments '/\\/*!/' -o build/partition-size.min.js",
+    "build": "npm ru lint && npm ru compile && npm ru standalone && npm ru minify"
   },
   "engines": {
     "node": "0.12.x"
@@ -31,9 +33,11 @@
     "coffee-script": "^1.9.2",
     "coffeeify": "^1.1.0",
     "coffeelint": "^1.9.7",
+    "derequire": "^2.0.0",
     "espower-coffee": "^0.10.0",
     "mocha": "^2.2.5",
-    "power-assert": "^0.11.0"
+    "power-assert": "^0.11.0",
+    "uglify-js": "^2.4.23"
   },
   "dependencies": {
     "lodash.partition": "^3.1.0"
