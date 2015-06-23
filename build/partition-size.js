@@ -1906,13 +1906,13 @@ module.exports = isNative;
  * License: MIT
  */
 "use strict";
-var partition, partitionSize;
+var partition;
 
 partition = _dereq_('lodash.partition');
 
-partitionSize = module.exports = (function() {
-  var _partitionSize;
-  return _partitionSize = function(array, size, _result, _n) {
+module.exports = (function() {
+  var partitionSize;
+  return partitionSize = function(array, size, _result, _n) {
     var _r;
     if (!Array.isArray(array)) {
       throw new Error('The first argument should be an Array.');
@@ -1940,7 +1940,7 @@ partitionSize = module.exports = (function() {
       _n = 1;
     }
     if (_result[_n].length > size) {
-      return _partitionSize(_result[_n], size, _result, _n);
+      return partitionSize(_result[_n], size, _result, _n);
     } else {
       return _result;
     }
