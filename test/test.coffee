@@ -1,6 +1,6 @@
 assert = require 'power-assert'
 
-partitionSize = require '../src/partition-size.coffee'
+partitionSize = require '../'
 
 describe 'partitionSize', ->
   arr = null
