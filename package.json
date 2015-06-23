@@ -17,7 +17,7 @@
   "scripts": {
     "start": "coffee -cw -o lib/ src/",
     "test": "mocha --require espower-coffee/guess test/**/*.coffee",
-    "lint": "coffeelint -f coffeelint.json src/partition-size.coffee",
+    "lint": "coffeelint -f coffeelint.json src/",
     "compile": "coffee -c -o lib/ src/",
     "standalone": "browserify src/partition-size.coffee -t coffeeify -s partitionSize | derequire > build/partition-size.js",
     "minify": "uglifyjs build/partition-size.js -m -c warnings=false --comments '/\\/*!/' -o build/partition-size.min.js",
