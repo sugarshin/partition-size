@@ -28,18 +28,18 @@
   },
   "author": "sugarshin",
   "license": "MIT",
+  "dependencies": {
+    "lodash.partition": "^3.1.1"
+  },
   "devDependencies": {
-    "browserify": "^10.2.0",
-    "coffee-script": "^1.9.2",
+    "browserify": "^10.2.4",
+    "coffee-script": "^1.9.3",
     "coffeeify": "^1.1.0",
-    "coffeelint": "^1.9.7",
+    "coffeelint": "^1.10.1",
     "derequire": "^2.0.0",
     "espower-coffee": "^0.10.0",
     "mocha": "^2.2.5",
     "power-assert": "^0.11.0",
     "uglify-js": "^2.4.23"
-  },
-  "dependencies": {
-    "lodash.partition": "^3.1.0"
   }
 }
