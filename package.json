@@ -1,6 +1,6 @@
 {
   "name": "partition-size",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "Splits an array by size",
   "repository": {
     "type": "git",
