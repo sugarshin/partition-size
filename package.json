@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "lint": "eslint src/",
-    "test": "mocha --compilers js:espower-babel/guess test/**/*.js",
+    "test": "npm run lint && mocha --compilers js:espower-babel/guess test/**/*.js",
     "compile": "babel -d lib/ src/",
     "standalone": "browserify src/partition-size.js -t babelify -s partitionSize | derequire > build/partition-size.js",
     "minify": "uglifyjs build/partition-size.js -m -c warnings=false --comments '/\\/*!/' -o build/partition-size.min.js",
