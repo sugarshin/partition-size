@@ -1,19 +1,18 @@
 {
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "node": true
   },
-  "parser": "babel-eslint",
   "rules": {
-    "strict": 0,
-    "quotes": [
-      1,
-      "single",
-      "avoid-escape"
-    ],
+    "quotes": [1, "single", "avoid-escape"],
     "no-underscore-dangle": 0,
-    "no-unused-vars": [
-      1
-    ]
+    "no-unused-vars": [1],
+    "indent": [1, 2],
+    "max-len": [1, 100, 2],
+    "max-params": [1, 4],
+    "comma-style": [2, "last"],
+    "space-before-blocks": [2, "always"],
+    "space-after-keywords": [2, "always"]
   }
 }
