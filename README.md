@@ -17,9 +17,9 @@ npm i partition-size
 ### `partitionSize(array, size);`
 
 ```js
-var partitionSize = require('partition-size');
+import partitionSize from 'partition-size';
 
-var njs = [
+const njs = [
   'vivalo',
   '3rensho',
   'kalavinka',
@@ -29,19 +29,14 @@ var njs = [
   'makino'
 ];
 
-var result = partitionSize(njs, 3);
-
-console.log(result); // => [['vivalo', '3rensho', 'kalavinka'], ['level', 'nagasawa', 'umezawa'], ['makino']]
-console.log(njs); // => ['vivalo', '3rensho', 'kalavinka', 'level', 'nagasawa', 'umezawa', 'makino']
+partitionSize(njs, 3); // => [['vivalo', '3rensho', 'kalavinka'], ['level', 'nagasawa', 'umezawa'], ['makino']]
 
 
 
-var arr = [1, 2, 3, 4];
-var result = partitionSize(arr, 5); // => [[1, 2, 3, 4]]
-
-var result = partitionSize(arr, 0); // => [1, 2, 3, 4]
-var result = partitionSize(arr, -1); // => [1, 2, 3, 4]
-var result = partitionSize(arr, 'not a number'); // => [1, 2, 3, 4]
+partitionSize([1, 2, 3, 4], 5); // => [[1, 2, 3, 4]]
+partitionSize([1, 2, 3, 4], 0); // => [1, 2, 3, 4]
+partitionSize([1, 2, 3, 4], -1); // => [1, 2, 3, 4]
+partitionSize([1, 2, 3, 4], 'not a number'); // => [1, 2, 3, 4]
 ```
 
 ## Contributing
