@@ -15,31 +15,28 @@
     "README.md"
   ],
   "scripts": {
-    "start": "coffee -cw -o lib/ src/",
-    "test": "mocha --require espower-coffee/guess test/**/*.coffee",
-    "lint": "coffeelint -f coffeelint.json src/",
-    "compile": "coffee -c -o lib/ src/",
-    "standalone": "browserify src/partition-size.coffee -t coffeeify -s partitionSize | derequire > build/partition-size.js",
+    "lint": "eslint src/",
+    "test": "mocha --compilers js:espower-babel/guess test/**/*.js",
+    "compile": "babel -d lib/ src/",
+    "standalone": "browserify src/partition-size.js -t babelify -s partitionSize | derequire > build/partition-size.js",
     "minify": "uglifyjs build/partition-size.js -m -c warnings=false --comments '/\\/*!/' -o build/partition-size.min.js",
-    "build": "npm ru lint && npm ru compile && npm ru standalone && npm ru minify"
+    "build": "npm run lint && npm run compile && npm run standalone && npm run minify"
   },
   "engines": {
     "node": "0.12.x"
   },
   "author": "sugarshin",
   "license": "MIT",
-  "dependencies": {
-    "lodash.partition": "^3.1.1"
-  },
   "devDependencies": {
-    "browserify": "^10.2.4",
-    "coffee-script": "^1.9.3",
-    "coffeeify": "^1.1.0",
-    "coffeelint": "^1.10.1",
-    "derequire": "^2.0.0",
-    "espower-coffee": "^0.10.0",
+    "babel": "^5.8.23",
+    "babel-eslint": "^4.1.0",
+    "babelify": "^6.2.0",
+    "browserify": "^11.0.1",
+    "derequire": "^2.0.2",
+    "eslint": "^1.3.0",
+    "espower-babel": "^3.3.0",
     "mocha": "^2.2.5",
-    "power-assert": "^0.11.0",
-    "uglify-js": "^2.4.23"
+    "power-assert": "^1.0.0",
+    "uglify-js": "^2.4.24"
   }
 }
