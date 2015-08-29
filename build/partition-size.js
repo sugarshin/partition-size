@@ -7,7 +7,12 @@
 
 'use strict';
 
-module.exports = function partitionSize(array, size) {
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = partitionSize;
+
+function partitionSize(array, size) {
   if (!Array.isArray(array)) {
     throw new TypeError('should be an Array.');
   }
@@ -28,7 +33,9 @@ module.exports = function partitionSize(array, size) {
     }
     return result;
   }, []);
-};
+}
+
+module.exports = exports['default'];
 
 },{}]},{},[1])(1)
 });
