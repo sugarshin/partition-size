@@ -15,9 +15,10 @@
     "README.md"
   ],
   "scripts": {
-    "lint": "eslint src/",
+    "start": "npm run compile -- -w",
+    "lint": "eslint src",
     "test": "npm run lint && mocha --compilers js:espower-babel/guess test/**/*.js",
-    "compile": "babel -d lib/ src/",
+    "compile": "babel src -d lib",
     "standalone": "browserify src/partition-size.js -t babelify -s partitionSize | derequire > build/partition-size.js",
     "minify": "uglifyjs build/partition-size.js -m -c warnings=false --comments '/\\/*!/' -o build/partition-size.min.js",
     "build": "npm run lint && npm run compile && npm run standalone && npm run minify"
