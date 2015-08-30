@@ -11,7 +11,7 @@ export default function partitionSize(array, size) {
     throw new TypeError('should be an Array.');
   }
 
-  if (typeof size !== 'number' || size <= 0) {
+  if (typeof size !== 'number' || size <= 0 || isNaN(size)) {
     return array;
   }
 
