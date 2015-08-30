@@ -54,4 +54,10 @@ describe('partitionSize', () => {
     assert.deepEqual(actual, expected, 'size not a number');
   });
 
+  it('size is NaN', () => {
+    const expected = [1, 2, 3, 4, 5, 6, 7, 8];
+    const actual = partitionSize(arr, NaN);
+    assert.deepEqual(actual, expected, 'size is NaN');
+  });
+
 });
